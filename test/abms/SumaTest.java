@@ -1,5 +1,6 @@
+package abms;
 
-import abms.Suma;
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -24,5 +25,15 @@ public class SumaTest extends Suma{
  
         assertEquals(sum2, total);
 }    
-    }
+    
+public void testAdd() {
+        System.out.println("add");
+        int a = 2;
+        int b = 3;
+        int expResult = 5;
+        int result = Suma.add(a, b);
+        assertEquals(expResult, result);
+
+}
+}
 

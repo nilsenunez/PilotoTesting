@@ -12,9 +12,9 @@ public class ConexionTest {
     public void testGetConexionn() {
         System.out.println("getConexionn");
         Conexion instance = null;
-        Connection expResult = null;
+        //Connection expResult = null;
         Connection result = instance.getConexionn();
-        assertEquals(expResult, result);
+        assertNotNull(result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -26,9 +26,9 @@ public class ConexionTest {
     public void testCerrarConexion() {
         System.out.println("cerrarConexion");
         Conexion instance = null;
-        //Connection expResult = null;
+       //Connection expResult = null;
         Connection result = instance.cerrarConexion();
-        assertNotNull(result);
+        assertNull(result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
