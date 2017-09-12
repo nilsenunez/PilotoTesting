@@ -55,7 +55,7 @@ public class login extends HttpServlet {
             //String servidor = "192.168.222.150:5433";
             //String database = "deb_aut";
             
-            String servidor = "localhost:5432";
+            String servidor = "192.168.126.19:5432";
             String database = "senatics";
 
             String url="";  

@@ -5,6 +5,7 @@
  */
 package abms;
 
+import java.util.LinkedList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author SAMSUNG
  */
-public class Suma2Test {
+public class consultaClientesTest {
     
-    public Suma2Test() {
+    public consultaClientesTest() {
     }
     
     @BeforeClass
@@ -38,18 +39,16 @@ public class Suma2Test {
     }
 
     /**
-     * Test of add method, of class Suma.
+     * Test of getClientes method, of class consultaClientes.
      */
     @Test
-    public void testAdd() {
-        System.out.println("add");
-        int a = 2;
-        int b = 3;
-        int expResult = 5;
-        int result = Suma.add(a, b);
+    public void testGetClientes() {
+        System.out.println("getClientes");
+        LinkedList<Clientes> expResult = null;
+        LinkedList<Clientes> result = consultaClientes.getClientes();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-       // fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
