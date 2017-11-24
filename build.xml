@@ -62,10 +62,31 @@
             </exec>
         </target>
 
+
+	<target name="tests" depends="compile-tests">
+		<junit printsummary="yes" haltonfailure="yes">
+		    <classpath>
+	    	    <pathelement location="${lib.dir}/junit-4.11.jar"/>
+	        	<pathelement location="${lib.dir}/hamcrest-core-1.1.jar"/>
+		        <path location="${classes.dir}"/>
+		        <path location="${classes.dir}-tests"/>
+	    	</classpath>
+			<formatter type="xml"/>
+			<batchtest fork="yes" todir="${test.dir}/reports">
+				<fileset dir="${test.dir}">
+					<include name="**/*Test.java"/>
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
     Notice that overridden target depends on jar target and not only on 
     compile target as regular run target does. Again, for list of available 
     properties which you can use check the target you are overriding in 
     nbproject/build-impl.xml file. 
+
+
+	
 
     -->
 </project>
